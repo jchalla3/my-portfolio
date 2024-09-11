@@ -242,7 +242,7 @@ export default function Home() {
             <small>
               Future
             </small>
-            Implementations
+            Features
           </h2>
           <div className="chatbot-blue">
             <div className="chat-info">
