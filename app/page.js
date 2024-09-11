@@ -5,18 +5,18 @@ import Image from "next/image";
 export default function Home() {
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [messageInput, setMessageInput] = useState('');
+  const [ messageInput, setMessageInput ] = useState('');
 
   const [messages, setMessages] = useState([
-    {
-      role: 'assistant',
-      content: 'How can I help you learn more about Buddy and his Resume?'
-    }
+		{
+			role: 'assistant',
+			content: 'How can I help you learn more about Buddy and his Resume?'
+		}
   ]);
 
   const submitForm = async (e) => {
     e.preventDefault();
-    let newMessages = [...messages, { role: 'user', content: messageInput }];
+    let newMessages = [...messages, { role: 'user', content: messageInput }]
     setMessages(newMessages);
     setMessageInput('');
     const apiMessage = await fetch(
@@ -59,7 +59,8 @@ export default function Home() {
               <a href="mailto:jhumphriesent@gmail.com" className="button">Contact Me</a>
             </li>
           </ul>
-          <a href="#" className="mobile-toggle" onClick={toggleMobileMenu}>
+          <a href="#" className="mobile-toggle" onClick=
+            {toggleMobileMenu}>
             <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
             </svg>
@@ -78,7 +79,7 @@ export default function Home() {
                 enjoyed
                 building aesthetically pleasing applications, showcasing my ability to learn and adapt
                 quickly. <span> Proficient in a
-                  range of industry-relevant languages, I'm eager to bring my passion for innovative solutions
+                  range of industry-relevant languages, Im eager to bring my passion for innovative solutions
                   to
                   a software engineering role, where I can collaborate with others to build dynamic and
                   responsive
@@ -98,19 +99,13 @@ export default function Home() {
                   <img src="./imgs/github.png" alt="GitHub" width="'48" />
                 </a>
                 <a href="https://www.linkedin.com/in/buddyjoehumphries/">
-                  <img src="./imgs/linkedin.png" alt="LinkedIn" width="'48" />
+                  <img src="./imgs/linkedin.png" alt="linkedin" width="'48" />
                 </a>
               </div>
             </div>
           </div>
           <div className="hero-yellow">
-            <Image
-              src="/imgs/Buddy.png"
-              alt="Buddy Humphries"
-              width={500}
-              height={500}
-              layout="responsive"
-            />
+            <img src="./imgs/Buddy.png" alt="Buddy Humphries" width="49%" />
           </div>
         </section>
         <section className="logos container">
