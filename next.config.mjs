@@ -1,11 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
+import { defineConfig } from 'next';
 
-export default nextConfig;
-
-module.exports = {
-    images: {
-      unoptimized: true,
-    },
-  };
-  
+export default defineConfig({
+  // Your Next.js configuration
+  images: {
+    unoptimized: true,
+  },
+});
