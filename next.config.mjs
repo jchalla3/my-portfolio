@@ -1,9 +1,11 @@
 // next.config.mjs
-import { defineConfig } from 'next';
+import next from 'next';
+const { PHASE_DEVELOPMENT_SERVER } = next.constants;
 
-export default defineConfig({
-  // Your Next.js configuration
+const nextConfig = {
   images: {
     unoptimized: true,
   },
-});
+};
+
+export default nextConfig;
