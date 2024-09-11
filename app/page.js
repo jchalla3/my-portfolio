@@ -105,7 +105,7 @@ export default function Home() {
           </div>
           <div className="hero-yellow">
             <Image
-              src="/imgs/jchalla.png"
+              src="/imgs/Buddy.png"
               alt="Buddy Humphries"
               width={500}
               height={500}
