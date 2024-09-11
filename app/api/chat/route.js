@@ -1,33 +1,32 @@
-import { Configuration, OpenAIApi } from 'openai';
+import { OpenAIClient, AzureKeyCredential } from '@azure/openai';
 import { NextResponse } from 'next/server';
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
+const apiKey = process.env.AZURE_OPENAI_API_KEY;
+const model = process.env.AZURE_OPENAI_MODEL;
 
-const openai = new OpenAIApi(configuration);
+export async function POST(req){
+	
+	const { messages } = await req.json();
 
-export async function POST(req) {
-  const { messages } = await req.json();
+	const client = new OpenAIClient(endpoint, new AzureKeyCredential(apiKey));
 
-  messages.unshift({
-    role: 'system',
-    content: `You are PortfolioGPT, answering only questions based on the resume provided.
+	messages.unshift({
+		role: 'system',
+		content: `You are PortfolioGPT, answering only questions based on the resume provided.
 Resume:
-${process.env.DATA_RESUME}
+${DATA_RESUME}
 
-Help users learn more about Buddy from his resume.`
-  });
+Help users learn more about Adrian from his resume.`
+	})
 
-  const response = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: messages,
-    max_tokens: 128,
-  });
+	const response = await client.getChatCompletions(model, messages, {
+		maxTokens: 128,
+	})
 
-  return NextResponse.json({ 
-    message: response.data.choices[0].message.content
-  });
+	return NextResponse.json({ 
+		message: response.choices[0].message.content
+	 })
 }
 
 
