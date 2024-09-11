@@ -105,7 +105,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-yellow">
-            <img src="./imgs/jchalla.png" alt="Buddy Humphries" width="49%" />
+            <img src="./imgs/Jchalla.png" alt="Buddy Humphries" width="49%" />
           </div>
 
 
