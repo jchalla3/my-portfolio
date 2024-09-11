@@ -87,7 +87,7 @@ export default function Home() {
                   delight our users. </span>
               </p>
               <div className="call-to-action">
-                <a href="./Resume 2024.pdf" className="button">
+                <a href="./Resume2024.pdf" className="button">
                   View Resume
                 </a>
                 <a href="mailto:jhumphriesent@gmail.com" className="button">
@@ -249,7 +249,7 @@ export default function Home() {
               <h3>Azure AI Chatbot</h3>
               <p>I'm putting together a chatbot here which knows all my skills, work experience and has a copy of my CV/Resume. You can use it to ask questions about me to get a better idea of who I am and what I've done.</p>
               <p>For now, you can download my resume here to take a look at it.  I'm currently looking for new opportunities so if you have a project you think I'd be a good fit for, please get in touch!</p>
-              <a href="./Resume 2024.pdf" className="button black">Download Resume</a>
+              <a href="./Resume2024.pdf" className="button black">Download Resume</a>
             </div>
             <div className="chat-box">
               <div className="scroll-area">
