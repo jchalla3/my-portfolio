@@ -105,11 +105,8 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-yellow">
-  <img src="/imgs/jchalla.png" alt="Buddy Humphries" style={{ width: '49%' }} />
-</div>
-
-
-
+            <img src="./imgs/jchalla.png" alt="Buddy Humphries" width="49%" />
+          </div>
         </section>
         <section className="logos container">
           <div className="marquee">
